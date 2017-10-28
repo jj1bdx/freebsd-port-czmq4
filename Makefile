@@ -1,10 +1,9 @@
-# Created by: Andrew Thompson <thompsa@FreeBSD.org>
-# $FreeBSD: head/net/czmq/Makefile 448460 2017-08-21 10:35:42Z koobs $
+# Created by: Kenji Rikitake
+# Not registered in FreeBSD Ports library yet
 
 PORTNAME=	czmq
 DISTVERSIONPREFIX=	v
 DISTVERSION=	4.0.2
-#PORTREVISION=	1
 CATEGORIES=	net
 
 USE_GITHUB=	yes
@@ -29,11 +28,13 @@ USES+=		shebangfix
 SHEBANG_FILES=	mkdoc model/rename_class doc/mkmans \
 				doc/mkman model/chkopts.pl
 
-GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--with-libzmq=${LOCALBASE} \
-				--with-pkgconfigdir=${LOCALBASE}/libdata/pkgconfig
+CONFLICTS_BUILD=	misc/e2fsprogs-libuuid
 
-INSTALL_TARGET=	install-strip
+GNU_CONFIGURE=	yes
+CONFIGURE_ARGS= --with-libzmq=${LOCALBASE} \
+		--with-pkgconfigdir=${LOCALBASE}/libdata/pkgconfig
+
+#INSTALL_TARGET=	install-strip
 TEST_TARGET=	check
 
 MAKE_ENV=	V=1
