@@ -34,7 +34,7 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS= --with-libzmq=${LOCALBASE} \
 		--with-pkgconfigdir=${LOCALBASE}/libdata/pkgconfig
 
-#INSTALL_TARGET=	install-strip
+INSTALL_TARGET=	install-strip
 TEST_TARGET=	check
 
 MAKE_ENV=	V=1
