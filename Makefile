@@ -28,10 +28,14 @@ USES+=		shebangfix
 SHEBANG_FILES=	mkdoc model/rename_class doc/mkmans \
 				doc/mkman model/chkopts.pl
 
-CONFLICTS_BUILD=	misc/e2fsprogs-libuuid net/czmq
+CONFLICTS_BUILD=	net/czmq
 
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS= --with-libzmq=${LOCALBASE} \
+# uuid_CFLAGS and uuid_LIBS required
+# to avoid conflicts with misc/e2fsprogs-libuuid 
+CONFIGURE_ARGS= uuid_CFLAGS="-I/usr/include ${CFLAGS}" \
+		uuid_LIBS="-lc" \
+		--with-libzmq=${LOCALBASE} \
 		--with-pkgconfigdir=${LOCALBASE}/libdata/pkgconfig
 
 INSTALL_TARGET=	install-strip
