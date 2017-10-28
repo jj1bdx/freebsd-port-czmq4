@@ -1,7 +1,7 @@
 # Created by: Kenji Rikitake
 # Not registered in FreeBSD Ports library yet
 
-PORTNAME=	czmq
+PORTNAME=	czmq4
 DISTVERSIONPREFIX=	v
 DISTVERSION=	4.0.2
 CATEGORIES=	net
@@ -28,8 +28,7 @@ USES+=		shebangfix
 SHEBANG_FILES=	mkdoc model/rename_class doc/mkmans \
 				doc/mkman model/chkopts.pl
 
-CONFLICTS=	net/czmq
-CONFLICTS_BUILD=	misc/e2fsprogs-libuuid
+CONFLICTS_BUILD=	misc/e2fsprogs-libuuid net/czmq
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS= --with-libzmq=${LOCALBASE} \
