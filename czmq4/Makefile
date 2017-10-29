@@ -1,7 +1,8 @@
 # Created by: Kenji Rikitake
 # Not registered in FreeBSD Ports library yet
 
-PORTNAME=	czmq4
+PORTNAME=	czmq
+PKGNAMESUFFIX=	4
 DISTVERSIONPREFIX=	v
 DISTVERSION=	4.0.2
 CATEGORIES=	net
@@ -11,7 +12,7 @@ GH_ACCOUNT=	zeromq
 GH_PROJECT=	czmq
 
 MAINTAINER=	kenji@k2r.org
-COMMENT=	High-level C Binding for ZeroMQ Version 4
+COMMENT=	High-level C Binding for ZeroMQ (Version 4)
 
 LICENSE=	MPL20
 LICENSE_FILE=	${WRKSRC}/LICENSE
