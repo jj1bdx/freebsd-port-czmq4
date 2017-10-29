@@ -37,7 +37,9 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS= uuid_CFLAGS="-I/usr/include ${CFLAGS}" \
 		uuid_LIBS="-lc" \
 		--with-libzmq=${LOCALBASE} \
-		--with-pkgconfigdir=${LOCALBASE}/libdata/pkgconfig
+		--with-pkgconfigdir=${LOCALBASE}/libdata/pkgconfig \
+		--enable-drafts="yes" \
+		--with-docs="yes"
 
 INSTALL_TARGET=	install-strip
 TEST_TARGET=	check
