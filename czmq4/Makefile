@@ -19,7 +19,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 LIB_DEPENDS=	libzmq.so:net/libzmq4
 
-MANPAGES_BUILD_DEPENDS=	xmlto:textproc/xmlto \
+BUILD_DEPENDS=	xmlto:textproc/xmlto \
 		asciidoc:textproc/asciidoc
 
 USES=		autoreconf libtool pkgconfig
