@@ -20,14 +20,14 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 LIB_DEPENDS=	libzmq.so:net/libzmq4
 
 MANPAGES_BUILD_DEPENDS=	xmlto:textproc/xmlto \
-						asciidoc:textproc/asciidoc
+		asciidoc:textproc/asciidoc
 
 USES=		autoreconf libtool pkgconfig
 USE_LDCONFIG=	yes
 
 USES+=		shebangfix
 SHEBANG_FILES=	mkdoc model/rename_class doc/mkmans \
-				doc/mkman model/chkopts.pl
+		doc/mkman model/chkopts.pl
 
 CONFLICTS_BUILD=	net/czmq
 
