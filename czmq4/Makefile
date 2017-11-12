@@ -1,5 +1,4 @@
-# Created by: Kenji Rikitake
-# $FreeBSD$
+# $FreeBSD: head/net/czmq4/Makefile 453995 2017-11-11 19:57:17Z joneum $
 
 PORTNAME=	czmq
 DISTVERSIONPREFIX=	v
@@ -13,22 +12,21 @@ COMMENT=	High-level C Binding for ZeroMQ (Version 4)
 LICENSE=	MPL20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BUILD_DEPENDS=	xmlto:textproc/xmlto \
-		asciidoc:textproc/asciidoc
+BUILD_DEPENDS=	asciidoc:textproc/asciidoc \
+		xmlto:textproc/xmlto
 LIB_DEPENDS=	libzmq.so:net/libzmq4
+
+USES=		autoreconf libtool pkgconfig shebangfix
+USE_LDCONFIG=	yes
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	zeromq
-GH_PROJECT=	czmq
 
-USES=		autoreconf libtool pkgconfig
-USE_LDCONFIG=	yes
+SHEBANG_FILES=	doc/mkman mkdoc \
+		model/chkopts.pl \
+		model/rename_class
 
-USES+=		shebangfix
-SHEBANG_FILES=	mkdoc model/rename_class doc/mkmans \
-		doc/mkman model/chkopts.pl
-
-CONFLICTS_BUILD=	net/czmq
+CONFLICTS_INSTALL=	czmq-3.*
 
 GNU_CONFIGURE=	yes
 # uuid_CFLAGS and uuid_LIBS required
