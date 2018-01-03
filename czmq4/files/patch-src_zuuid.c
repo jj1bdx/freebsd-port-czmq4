@@ -1,6 +1,6 @@
---- src/zuuid.c.FCS	2017-12-31 23:43:10.000000000 +0900
-+++ src/zuuid.c	2018-01-03 12:57:25.185271000 +0900
-@@ -47,7 +47,7 @@
+--- src/zuuid.c.orig	2017-12-31 14:43:10 UTC
++++ src/zuuid.c
+@@ -47,7 +47,7 @@ zuuid_new (void)
      assert (sizeof (uuid) == ZUUID_LEN);
      UuidCreate (&uuid);
      zuuid_set (self, (byte *) &uuid);

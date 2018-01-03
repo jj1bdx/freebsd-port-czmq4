@@ -1,6 +1,6 @@
---- include/czmq_prelude.h.FCS	2017-12-31 23:43:10.000000000 +0900
-+++ include/czmq_prelude.h	2018-01-03 12:47:12.802684000 +0900
-@@ -683,6 +683,9 @@
+--- include/czmq_prelude.h.orig	2017-12-31 14:43:10 UTC
++++ include/czmq_prelude.h
+@@ -683,6 +683,9 @@ char *if_indextoname (unsigned int ifind
  #if defined (__UTYPE_OSX) && !defined (HAVE_UUID)
  #   define HAVE_UUID 1
  #endif
