@@ -3,10 +3,11 @@
 * Based on <https://github.com/zeromq/czmq>
 * Current code: v4.1.0
 * See also SVNweb: <https://svnweb.freebsd.org/ports/head/net/czmq4/>
+* Submitted as: <https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=224853>
 
 ## Known caveats
 
-* Conflicts with Port `net/czmq` (CZMQ 3.0.2)
+* Conflicts with Port `net/czmq` (CZMQ Version 3)
 
 ## Known issues
 
